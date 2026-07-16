@@ -1,0 +1,445 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+:root{
+    --bg:#f8fafc;
+    --text:#111827;
+    --muted:#555;
+    --primary:#2563eb;
+    --accent:#1d4ed8;
+    --card:#ffffff;
+    --shadow:rgba(0,0,0,0.12);
+    --radius:10px;
+    --max-width:1100px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    z-index:1000;
+}
+
+.navbar{
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+/* ===========================
+        HERO SECTION
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    width:90%;
+    max-width:var(--max-width);
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:60px;
+
+    padding-top:90px;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h3{
+    font-size:24px;
+    color:var(--primary);
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin:10px 0;
+    color:var(--text);
+}
+
+.hero-content h2{
+    font-size:32px;
+    color:var(--muted);
+    margin-bottom:20px;
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+    color:var(--muted);
+
+    margin-bottom:30px;
+
+    max-width:650px;
+}
+
+/* Buttons */
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn{
+
+    background:var(--primary);
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    transition:.25s ease;
+}
+
+.btn:hover{
+    background:var(--accent);
+}
+
+.btn2{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    padding:12px 28px;
+
+    border-radius:8px;
+
+    transition:.25s ease;
+}
+
+.btn2:hover{
+
+    background:var(--primary);
+
+    color:white;
+}
+
+/* Hero Image */
+
+.hero-image{
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.hero-image img{
+
+    width:370px;
+    height:370px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:0 10px 30px var(--shadow);
+}
+
+/* ===========================
+        SECTION TITLE
+=========================== */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+    color:#111827;
+}
+
+/* ===========================
+        ABOUT
+=========================== */
+
+#about{
+
+    width:90%;
+
+    margin:100px auto;
+}
+
+.about-container{
+
+    display:flex;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+
+    width:350px;
+
+    border-radius:var(--radius);
+
+    box-shadow:0 10px 25px var(--shadow);
+}
+
+.about-text{
+    flex:2;
+}
+
+.about-text h3{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+    color:#2563eb;
+}
+
+.about-text p{
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+    color:#444;
+}
+
+/* ===========================
+        EDUCATION
+=========================== */
+
+#education,
+#skills,
+#projects,
+#experience,
+#contact{
+    width:90%;
+    margin:100px auto;
+}
+
+.skills-grid,
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:24px;
+}
+
+.skill-card,
+.project-card,
+.experience-card,
+.contact-card{
+    background:var(--card);
+    padding:24px;
+    border-radius:var(--radius);
+    box-shadow:0 8px 20px var(--shadow);
+}
+
+.skill-card h3,
+.project-card h3,
+.experience-card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.contact-links{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-top:16px;
+}
+
+.contact-links a{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.copy-btn{
+    background:transparent;
+    border:1px solid var(--primary);
+    color:var(--primary);
+    padding:6px 10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.education-card{
+
+    background:var(--card);
+
+    margin-bottom:25px;
+
+    padding:30px;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:var(--radius);
+
+    box-shadow:0 8px 20px var(--shadow);
+
+    transition:.25s ease;
+}
+
+.education-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.education-card h3{
+
+    font-size:26px;
+
+    color:#111827;
+
+    margin-bottom:8px;
+}
+
+.education-card h4{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+}
+
+.education-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+    margin-bottom:8px;
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+    background:#0b1020;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px 20px;
+}
+
+footer p{
+
+    font-size:16px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+        padding-top:100px;
+    }
+
+    .hero-image{order:-1}
+
+    .hero-content h1{font-size:40px}
+
+    .hero-content h2{font-size:20px}
+
+    .hero-image img{width:240px;height:240px}
+
+    .about-container{flex-direction:column}
+
+    .navbar{height:65px}
+
+    .nav-links{gap:14px}
+}
+
+@media (max-width: 480px){
+    .hero-content h1{font-size:32px}
+    .hero-content h2{font-size:18px}
+    .hero-content p{font-size:16px}
+    .logo{font-size:22px}
+}
+
+/* small helpers */
+.container{max-width:var(--max-width);width:90%;margin:0 auto}
+.nav-links a.active{color:var(--primary);border-bottom:2px solid var(--primary);padding-bottom:6px}
